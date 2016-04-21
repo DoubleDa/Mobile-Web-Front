@@ -1,0 +1,3 @@
+function firstFun() {
+	alert("Success!");
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript学习demo</title>
+	<meta charset="utf-8" />
+	<!--JavaScript脚本引入（1）-->
+	<script ></script>
+</head>
+<body>
+	<!--JavaScript：直接写入 HTML 输出流-->
+	<script>
+		document.write("<h1>JavaScript学习demo</h1>");
+		document.write("<p>JavaScript学习demo</p>");
+	</script>
+
+	<!--JavaScript：对事件的反应-->
+	<button type="button" onclick="alert('Success!')">click me</button>
+
+	<!--JavaScript：改变 HTML 内容-->
+	<p id="my">测试JavaScript功能demo</p>
+	<!--JavaScript脚本引入（2）-->
+	<script>
+		function myFun() {
+			x=document.getElementById("my");
+			x.innerHTML="Success!";
+		}
+
+		
+	</script>
+	<button type="button" onclick="myFun()">点我</button>
+
+	<!--JavaScript：改变 HTML 图像-->
+	<script>
+		function changeImg() {
+			ele=document.getElementById("myImg");
+			if(ele.src.match("bulbon")){
+				ele.src="images/pic_bulboff.gif";
+			}else{
+				ele.src="images/pic_bulbon.gif";
+			}
+		}
+	</script>
+	<img src="images/pic_bulboff.gif" id="myImg" onclick="changeImg()" width="160" height="200">
+
+	<!--JavaScript：改变 HTML 样式-->
+	<p id="myText">公司大概会尽快</p>
+	<script>
+		function changeStyle() {
+			x=document.getElementById("myText");
+			x.style.color="#FF0000";
+		}
+	</script>
+	<button type="button" onclick="changeStyle()">点击我吧</button>
+
+	<!--JavaScript：验证输入-->
+	<script>
+		function judgeInput() {
+			var x=document.getElementById("myInput").value;
+			if(x==""||isNaN(x)){
+				alert("输入非数字！");
+			}
+		}
+	</script>
+	<p>JavaScript判断输入字符是否为字符</p>
+	<input id="myInput" type="text">
+	<button type="button" onclick="judgeInput()">click me</button>
+	<!--JavaScript脚本引入（3）-->
+	<script src="js/index.js" />
+	<!--TODO http://www.runoob.com/js/js-output.html-->
+</body>	
+</html>
