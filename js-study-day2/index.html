@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript学习demo</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+	<h1>这是一个JavaScript测试程序</h1>
+	<p id="test">更改数据</p>
+	<script>
+		<!--使用 window.alert() 弹出警告框-->
+		//window.alert(10+2);
+
+		<!--使用 document.write() 方法将内容写到 HTML 文档中-->
+		//document.write("插入数据");
+
+		<!--使用 innerHTML 写入到 HTML 元素-->
+		//document.getElementById("test").innerHTML="更改成功";
+
+		<!--使用 console.log() 写入到浏览器的控制台-->
+		// a=9;
+		// b=4;
+		// c=a+b;
+		// console.log(c);
+
+		<!--JavaScript 字面量-->
+
+		<!--数字（Number）字面量-->
+		//document.getElementById("test").innerHTML=3.14;
+		//document.getElementById("test").innerHTML=1001;
+		//document.getElementById("test").innerHTML=323e5;
+
+		<!--字符串（String）字面量-->
+		//document.getElementById("test").innerHTML="dyx";
+		//document.getElementById("test").innerHTML='dyx';
+
+		<!--表达式字面量-->
+		//document.getElementById("test").innerHTML=7+8;
+		//document.getElementById("test").innerHTML=8*17;
+
+		<!--数组（Array）字面量-->
+		//var nums=[12,45,3,5,78,67];
+		// var nums=new Array();
+		// nums[0]=12;
+		// nums[1]=2;
+		// nums[2]=45;
+		// for(var i=0;i<nums.length;i++){
+		// 	document.write(nums[i]+"<br>");
+		// }
+
+		<!--对象（Object）字面量-->
+		//var myObject={"name":"dyx","age":26,"phone":13122430990};
+
+		<!--函数（Function）字面量-->
+		// function myFun(a,b) {
+		// 	return a*b;
+		// }
+		// document.getElementById("test").innerHTML=myFun(2,7);
+
+		<!--JavaScript 变量-->
+		// var length;
+		// length=8;
+		// document.getElementById("test").innerHTML=length;
+
+		<!--JavaScript 操作符-->
+		//document.getElementById("test").innerHTML=2*(3+8-6);
+
+		<!--JavaScript 语句-->
+		// x=5+8;
+		// y=x+9;
+		// document.getElementById("test").innerHTML=y;
+
+		<!--JavaScript 关键词-->
+		// var x=6+9;
+		// var y=x+4;
+		// document.getElementById("test").innerHTML=x;
+
+		<!--JavaScript 关键字-->
+
+
+		<!--对代码行进行折行-->
+		// document.getElementById("test").innerHTML="This is a \
+		// test program!";
+
+		<!--JavaScript 数据类型：字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）-->
+		<!--JavaScript 拥有动态类型-->
+		//var x;							//undefined
+		//var x=23;							//Number
+		//var x="eystrf";					//String
+		// var x={"name":"dyx","age":26};	//Object
+		// console.log(x);
+
+		<!--声明变量类型-->
+		// var name=new String;
+		// var age=new Number;
+		// var isSuccess=new Boolean;
+		// var myArray=new Array;
+		// var myObject=new Object;
+
+		<!--JavaScript 对象-->
+		// var jeep={
+		// 	"name":"牧马人",
+		// 	"color":"白色",
+		// 	"weight":1000,
+		// 	"sale":45,
+		// 	"speed":180,
+		// 	printJeep:function () {
+		// 		console.log("Success!");
+		// 	}
+		// };
+			<!--访问对象属性-->
+			//console.log(jeep.name);
+			//console.log(jeep["name"]);
+			<!--访问对象方法-->
+			//jeep.printJeep();
+		<!--JavaScript 函数-->
+		<!--JavaScript 作用域-->
+		// var name="dayongxin";//全局变量
+		// function myFun() {
+		// 	var name="dyx";//局部变量
+		// 	name="lalala";//全局变量
+		// }
+
+		<!--JavaScript 事件-->
+		// function showTime() {
+		// 	document.getElementById("test").innerHTML=Date();
+		// }
+
+		<!--JavaScript 字符串：字符串的索引从 0 开始-->
+		//var name="dayongxin";
+		//console.log(name[3]);
+		//console.log(name.length);
+		<!--使用反斜杠 (\) 来转义 "Vikings" 字符串中的双引号-->
+		// var temp="This is a named \"lalala\" program!";
+		// console.log(temp);
+
+		<!--字符串可以是对象-->
+		<!--字符串-->
+		var name="   dayongxin";
+		<!--对象-->
+		//var firstName=new String("dayongxin");
+		//console.log(typeof name+"|"+typeof firstName);
+
+		<!--=== 为绝对相等，即数据类型与值都必须相等-->
+		<!--字符串属性和方法-->
+		//console.log(name.length);
+		//console.log(name.constructor);
+		//console.log(name.prototype);
+		//console.log(name.charAt(2));
+		//console.log(name.charCodeAt(2));
+		//console.log(name.concat("123","456"));//dayongxin123456
+		//console.log(name.indexOf('a'));
+		//console.log(name.lastIndexOf('a'));
+		//console.log(name.localeCompare("dyx"));
+		//console.log(name.split());
+		//console.log(name.toLocaleLowerCase());
+		//console.log(name.toLocaleUpperCase());
+		//console.log(name.toLowerCase());
+		//console.log(name.toUpperCase());
+		//console.log(name.trim());
+		//console.log(name.valueOf());
+
+		<!--JavaScript 运算符-->
+
+		<!--JavaScript 算术运算符-->
+		//x=5;
+		//y=3;
+		//z=((x+y-1)*x+y)/y;
+		//z=x%y;
+		//x++;
+		//z=x;
+		//y--;
+		//z=y;
+		//console.log(z);//12.666666666666666|2|
+
+		<!--JavaScript 赋值运算符-->
+
+
+		<!--JavaScript 比较 和 逻辑运算符-->
+
+
+		<!--JavaScript If...Else 语句-->
+		// var age=10;
+		// if(age>=18){
+		// 	console.log("你已经成年！");
+		// }else{
+		// 	console.log("你还未成年！");
+		// }
+		// var weight=200;
+		// if(weight>0&&weight<50){
+		// 	console.log("偏瘦");
+		// }else if(weight>=50&&weight<70){
+		// 	console.log("正常");
+		// }else if(weight>=70&&weight<90){
+		// 	console.log("偏胖");
+		// }else{
+		// 	console.log("肥胖");
+		// }
+
+		<!--JavaScript switch 语句-->
+		// var day=new Date().getDay();
+		// var month=new Date().getMonth();
+		// var year=new Date().getFullYear();
+		//console.log(year);
+		// var x;
+		// switch(day){
+
+		// 	case 0:
+		// 	x="Sunday";
+		// 	break;
+
+		// 	case 1:
+		// 	x="Monday";
+		// 	break;
+
+		// 	case 2:
+		// 	x="Tuesday";
+		// 	break;
+
+		// 	case 3:
+		// 	x="Wednesday";
+		// 	break;
+
+		// 	case 4:
+		// 	x="Thursday";
+		// 	break;
+
+		// 	case 5:
+		// 	x="Friday";
+		// 	break;
+
+		// 	case 6:
+		// 	x="Saturday";
+		// 	break;
+
+		// 	default:
+		// 	x="error";
+		// 	break;
+		// }
+		// console.log(x);
+
+
+		<!--TODO JavaScript for 循环-->
+
+
+
+	</script>
+	<button onclick="showTime()">显示时间</button>
+</body>
+</html>
