@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript学习demo</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0"/>
+</head>
+<body>
+	<script>
+		//var cars=[12,2,4,6,7,89,10,67,26,37];
+		<!--JavaScript for 循环-->
+		// for(var i=0;i<cars.length;i++){
+		// 	document.write(cars[i]+"<br>");
+		// }
+
+		<!--语句1：开始前执行starts-->
+		// for(var i=0,len=cars.length;i<len;i++){
+		// 	document.write(cars[i]+"<br>");
+		// }
+
+		<!--语句2：定义运行循环（代码块）的条件-->
+
+
+		<!--语句3：在循环（代码块）已被执行之后执行-->
+		// var i=0,len=cars.length;
+		// for(;i<len;){
+		// 	document.write(cars[i]+"<br>");
+		// 	i++;
+		// }
+
+		<!--For/In 循环-->
+		// var person={name:"dayongxin",age:18,phone:13122430909};
+		// for(x in person){
+		// 	document.write(person[x]+"<br>");
+		// }
+
+		<!--JavaScript while 循环-->
+		// while(i<5){
+		// 	x=x+"The number is "+i+"<br>";
+		// 	i++;
+		// }
+
+		<!--JavaScript typeof, null, 和 undefined-->
+		//console.log(typeof "dayongxin");
+		//console.log(typeof 2.26);
+		//console.log(typeof true);
+		//console.log(typeof [1,23,4]);
+
+		<!--设置为 null 来清空对象-->
+		//var person=null;
+
+		<!--设置为 undefined 来清空对象（undefined 是一个没有设置值的变量）-->
+		//var person=undefined;
+		//console.log(typeof person);
+
+		<!--Undefined和Null的区别-->
+		//console.log(typeof null);//object
+		//console.log(typeof undefined);//undefined
+		//console.log(null==undefined);//true
+		//console.log(null===undefined);//false
+
+		<!--JavaScript 类型转换-->
+
+		<!--constructor 属性返回所有 JavaScript 变量的构造函数。-->
+		//console.log("dyx".constructor);//function String() { [native code] }
+
+		<!--使用 constructor 属性来查看是对象还是数组-->
+		// function isArray(myArray) {
+		// 	return myArray.constructor.toString().indexOf("Array") > -1;
+		// }
+
+		//var myArray={name:"dyx",age:16};
+		// var myArray=[1,2,5];
+		// console.log(isArray(myArray));
+
+		<!--使用constructor属性来查看是对象是否为日期-->
+		// function isDate(myDate) {
+		// 	return myDate.constructor.toString().indexOf("Date") > -1;
+		// }
+
+		//var myDate=new Date();
+		// var myDate={name:"dyx",age:16};
+		// console.log(isDate(myDate));
+
+		<!--JavaScript变量可以转换为新变量或其他数据类型：1、通过使用JavaScript函数；2、通过JavaScript自身自动转换-->
+		<!--将数字转换为字符串-->
+		//console.log(typeof String(123+23));
+		//console.log(typeof (123+23).toString());
+
+		<!--将布尔值转换为字符串-->
+		//console.log(typeof String(true));
+		//console.log(false.toString());
+
+		<!--将日期转换为字符串-->
+		//console.log(typeof String(Date()));
+		//console.log(typeof Date().toString());
+
+		<!--将字符串转换为数字-->
+		//console.log(typeof Number("3.14"));
+		//console.log(Number(" "));
+		//console.log(Number("66 78"));//NaN
+
+		<!--将布尔值转换为数字-->
+		//console.log(Number(true));
+
+		<!--将日期转换为数字-->
+		//console.log(Number(new Date()));
+
+		<!--JavaScript 正则表达式-->
+		<!--search() 方法 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置-->
+		var str="visit w3cschool";
+		//console.log(str.search(/w3cschool/i));
+		//console.log(str.search("w3cschool"));
+
+		<!--replace() 方法 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串-->
+		var str="visit Google";
+		//console.log(str.replace(/Google/i,"w3cschool"));
+		//console.log(str.replace("Google","w3cschool"));
+
+		<!--使用 test()：用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false-->
+		//var patt=new RegExp("e");
+		//console.log(patt.test("This is test!"));
+
+		<!--使用 exec()：该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null-->
+		//console.log(patt.exec("hello world me he"));//["e", index: 1, input: "hello world me he"]
+
+		<!--JavaScript 错误 - throw、try 和 catch-->
+		// function showMessage() {
+		// 		try{
+		// 			alert("Success!");
+		// 		}catch(err){
+		// 			txt="有错\n\n";
+		// 			txt+="错误信息"+err.message+"\n\n";
+		// 			txt+="点击确认继续\n\n";
+		// 			alert(txt);
+		// 		}
+		// }
+
+		<!--Throw 语句-->
+		// function myFun() {
+		// 	try{
+		// 		var x=document.getElementById("demo").value;
+		// 		if(x==""){
+		// 			throw "empty";
+		// 		}
+		// 		if(isNaN(x)){
+		// 			throw "not a number";
+		// 		}
+		// 		if(x>10){
+		// 			throw "too high";
+		// 		}
+		// 		if(x<5){
+		// 			throw "too low";
+		// 		}
+		// 	}catch(err){
+		// 		var y=document.getElementById("mess");
+		// 		y.innerHTML="Error:"+err+".";
+		// 	}
+		// }
+
+		<!--JavaScript 调试-->
+
+		// <!--JavaScript 表单验证-->
+		// function validateNonEmpty() {
+		// 	var x=document.forms["form"]["name"].value;
+		// 	if(x==null||x==""){
+		// 		alert("姓名必须填写！");
+		// 		return false;
+		// 	}
+		// }
+
+		// <!--E-mail 验证-->
+		// function validateEmail() {
+		// 	var x=document.forms["form"]["name"].value;
+		// 	//@
+		// 	var atpos=x.indexOf("@");
+		// 	//.
+		// 	var dotpos=x.lastIndexOf(".");
+		// 	if(atpos<1||dotpos<atpos+2||dotpos+2>=x.length){
+		// 		alert("非法的Email！");
+		// 		return false;
+		// 	}
+		// }
+
+		<!--JavaScript JSON-->
+		//json字符串
+		//var json='{"name":"dayongxin","age":18,"phone":13122430990}';
+		//将json字符串解析为JavaScript对象
+		//console.log(JSON.parse(json));
+
+		//将JavaScript对象转换为json字符串
+		// var obj=JSON.stringify(JSON.parse(json));
+		// console.log(obj);
+
+		<!--javascript:void(0) 含义-->
+		// function myValue() {
+		// 	var a,b,c;
+
+		// 	a= void (b=5,c=9);
+		// 	document.write('a='+a+'b='+b+'c='+c);
+		// }
+
+		<!--JavaScript 代码规范-->
+		<!--变量名-->
+		var firstName="dyx";
+		var price=89.3;
+
+		<!--空格与运算符-->
+		var x=y+z;
+		var values=["name","age","phone"];
+
+		<!--代码缩进：通常使用 4 个空格符号来缩进代码块-->
+		function myFun() {
+		    return ((3+5)+7);
+		}
+
+		<!--语句规则：一条语句通常以符号作为结束符-->
+		var names={
+			firstName:"dyx",
+			age:18,
+			school:cqupt
+		};
+
+		<!--每行代码字符小于 80-->
+
+		<!--HTML 载入外部 JavaScript 文件-->
+
+	</script>
+	<!--<button type="button" onclick="showMessage()">查看消息</button>-->
+	<!-- <input id="demo" type="text"></input>
+	<button type="button" onclick="myFun()">测试按钮</button>
+	<p id="mess"></p> -->
+
+	<!-- <form name="form" action="" onsubmit="return validateEmail()" method="post">
+		<input type="text" name="name">
+		<button type="submit" value="提交">提交</button>
+	</form> -->
+
+	<!--<a href="javascript:void(0)">点击此处</a>-->
+	<!--<a href="javascript:void(alert('Success!'))">点击此处</a>-->
+
+	<!--<button type="button" onclick="myValue()">点击此处</button>-->
+
+	<!--href="#"与href="javascript:void(0)"的区别-->
+	<!-- <a href="javascript:void(0)">点我没有任何反应</a>
+	<br>
+	<a href="#test">点我到达指定位置</a>
+
+	<p id="test">测试</p> -->
+
+	<script src="myjs.js"></script>
+</body>
+</html>
