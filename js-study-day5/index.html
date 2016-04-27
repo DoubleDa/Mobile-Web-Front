@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript学习Demo</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+	<script>
+		<!--JavaScript 闭包-->
+		<!--全局变量-->
+		function myFun() {
+			var a=3;
+			return a*a;
+		}
+		<!--b是全局变量：在web页面中全局变量属于 window 对象-->
+		var b=7;
+		function myFun1() {
+			return b*b;
+		}
+		<!--变量声明是如果不使用 var 关键字，那么它就是一个全局变量，即便它在函数内定义-->
+
+		<!--计数器困境-->
+		var counter=0;
+		function add() {
+			counter+=1;
+		}
+		<!--JavaScript 内嵌函数-->
+		function add() {
+			var counter=0;
+			function plus() {
+				counter+=1;
+			}
+			plus();
+			return counter;
+		}
+		<!--JavaScript 闭包-->
+		var add=(function () {
+			var counter=0;
+			return function () {
+				return counter+=1;
+			}
+		})();
+	</script>
+</body>
+</html>
