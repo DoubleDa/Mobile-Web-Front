@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学习Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!--Bootstrap 表单-->
+	<!--1、垂直或基本表单-->
+	<!-- <form role="form"> -->
+	<!--2、内联表单-->
+	<!-- <form class="form-inline" role="form">
+		<div class="form-group">
+			<label for="name" class="sr-only">名称</label>
+			<input type="text" class="form-control" id="name" placeholder="请输入名称"></input>
+		</div>
+
+		<div class="form-group">
+			<label for="file-input" class="sr-only">文件输入</label>
+			<input type="file" id="file"></input>
+			<p class="help-doc">请上传帮助文档</p>
+		</div>
+		<div class="form-group">
+			<label>
+				<input type="checkbox">请打勾</input>
+			</label>
+		</div>
+		<button type="button" class="button-submit">确认</button>
+	</form> -->
+	<!--3、水平表单-->
+	<!-- <form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label">名字</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="name" placeholder="请输入名字"></input>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="password" class="col-sm-2 control-label">密码</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="password" placeholder="请输入密码"></input>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<label>
+					<input type="checkbox">是否记住密码？</input>
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="but">登录</button>
+				<button type="submit" class="but">注册</button>
+			</div>
+		</div>
+	</form> -->
+	<!--支持的表单控件：input-->
+	<!-- <form role="form">
+		<div class="form-group">
+			<label for="tag">标签</label>
+			Bootstrap 提供了对所有原生的 HTML5 的 input 类型的支持，包括：text、password、datetime、datetime-local、date、month、time、week、number、email、url、search、tel 和 color。适当的 type 声明是必需的，这样才能让 input 获得完整的样式
+			<input type="text" class="form-control" placeholder="请输入标签"></input>
+		</div>
+	</form> -->
+	<!--支持的表单控件：textarea-->
+	<!-- <form role="form">
+		<div class="form-group">
+			<label for="content">意见反馈</label>
+			<textarea class="form-control" rows="3" placeholder="请输入你的宝贵意见"></textarea>
+		</div>
+	</form> -->
+	<!--复选框（（Checkbox）和单选框（Radio）-->
+	<!--复选框-->
+	<!-- <label for="name">使用复选框</label>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="">上海</input>
+		</label>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="">天津</input>
+		</label>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="">北京</input>
+		</label>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="">重庆</input>
+		</label>
+	</div>
+	<label for="name">使用单选框</label>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsRadios" id="id1" value="man" checked="">男</input>
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="optionsRadios" id="id2" value="woman">女</input>
+		</label>
+	</div> -->
+	<!-- <label for="name">使用内联复选框</label>
+	<div class="checkbox-inline">
+		<label>
+			<input type="checkbox" value="">上海</input>
+		</label>
+	</div>
+	<div class="checkbox-inline">
+		<label>
+			<input type="checkbox" value="">天津</input>
+		</label>
+	</div>
+	<div class="checkbox-inline">
+		<label>
+			<input type="checkbox" value="">北京</input>
+		</label>
+	</div>
+	<div class="checkbox-inline">
+		<label>
+			<input type="checkbox" value="">重庆</input>
+		</label>
+	</div>
+	<label for="name">使用内联单选框</label>
+	<div class="radio-inline">
+		<label>
+			<input type="radio" name="optionsRadios" id="id1" value="man" checked="">男</input>
+		</label>
+	</div>
+	<div class="radio-inline">
+		<label>
+			<input type="radio" name="optionsRadios" id="id2" value="woman">女</input>
+		</label>
+	</div> -->
+
+	<!--选择框（Select）-->
+	<!--当您想让用户从多个选项中进行选择，但是默认情况下只能选择一个选项时，则使用选择框。
+（1）使用 <select> 展示列表选项，通常是那些用户很熟悉的选择列表，比如州或者数字。
+（2）使用 multiple="multiple" 允许用户选择多个选项。-->
+	
+	<!-- <form role="form">
+		<div class="form-group">
+			<label for="name">使用单个选项</label>
+			<select class="form-control">
+				<option>伦敦</option>
+				<option>柏林</option>
+				<option>北京</option>
+				<option>东京</option>
+				<option>巴黎</option>
+				<option>纽约</option>
+				<option>华盛顿</option>
+			</select>
+
+			<label for="name">使用多个选项</label>
+			<select class="form-control" multiple="">
+				<option>伦敦</option>
+				<option>柏林</option>
+				<option>北京</option>
+				<option>东京</option>
+				<option>巴黎</option>
+				<option>纽约</option>
+				<option>华盛顿</option>
+			</select>
+		</div>
+	</form> -->
+
+	<!--静态控件-->
+	<!-- <form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">用户名</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">dayongxin@aliyun.com</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="password">密码</label>
+			<div class="col-sm-10">
+				<input type="password" placeholder="请输入密码" class="form-control"></input>
+			</div>
+		</div>
+	</form> -->
+
+	<!--表单控件状态-->
+	<!-- <form role="form" class="form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">聚焦</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" value="请输入内容"></input>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-2 control-label">禁用</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" value="请输入内容" disabled=""></input>
+			</div>
+		</div>
+
+		<fieldset disabled="">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">禁用输入</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" value="请输入内容" disabled=""></input>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">禁用选择菜单</label>
+				<div class="col-sm-10">
+					<select class="form-control" id="option">
+						<option>测试0</option>
+						<option>测试1</option>
+						<option>测试2</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
+
+		<div class="form-group has-success">
+			<label class="col-sm-2 control-label" for="success">
+				输入成功
+			</label>
+			<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="请输入内容"></input>
+			</div>
+		</div>
+
+		<div class="form-group has-warning">
+			<label class="col-sm-2 control-label" for="warning">
+				输入警告
+			</label>
+			<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="请输入内容"></input>
+			</div>
+		</div>
+
+		<div class="form-group has-error">
+			<label class="col-sm-2 control-label" for="error">
+				输入错误
+			</label>
+			<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="请输入内容"></input>
+			</div>
+		</div>
+	</form> -->
+
+	<!--TODO Bootstrap 按钮-->
+
+</body>
+</html>
