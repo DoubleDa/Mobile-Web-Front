@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript学习Demo</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+    <!-- <p id="test">测试测试</p>
+    <p>测试</p> -->
+    <!-- <div id="main">
+    	<p id="test">测试测试</p>
+    	<p>测试</p>
+    </div> -->
+   <!--  <p id="test">测试测试</p>
+    <p>测试</p> -->
+    <!-- <img src="images/favicon.png" id="main"> -->
+    <p id="p1">测试1</p>
+    <p id="p2">测试2</p>
+    <p id="p3">测试3</p>
+    <script>
+        <!--1、通过id查找HTML元素-->
+    	// var x=document.getElementById("test");
+    	// document.write("<p>成功："+x.innerHTML+"</p>");
+
+    	<!--2、通过标签名查找 HTML 元素-->
+    	// var x=document.getElementById("main");
+    	// var y=x.getElementsByTagName("p");
+    	// document.write("<p>成功："+y[0].innerHTML+"</p>");
+
+    	<!--3、通过类名找到 HTML 元素-->
+    	// x=document.getElementsByClassName("test");
+    	// document.write("<p>成功："+x[0].innerHTML+"</p>");
+
+    	<!--JavaScript HTML DOM - 改变 HTML-->
+
+    	<!--改变 HTML 输出流-->
+    	// document.write(new Date());
+
+    	<!--改变 HTML 内容-->
+    	// document.getElementById("test").innerHTML="Success";
+
+    	<!--改变 HTML 属性-->
+    	//document.getElementById("main").src="images/img_default.png";
+
+    	<!--JavaScript HTML DOM - 改变CSS-->
+    	document.getElementById("p1").style.color="red";
+    	document.getElementById("p2").style.fontFamily="Arial";
+    </script>
+</body>
+</html>
