@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript学习Demo</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+</head>
+<body>
+    <!--JavaScript高级教程-->
+
+    <!--JavaScript对象-->
+    <!--创建新对象有两种不同的方法：1、定义并创建对象的实例；2、使用函数来定义对象，然后创建新的对象实例-->
+    <script>
+    <!--1、定义并创建对象的实例-->
+    	// var person=new Object();
+    	// person.name="dayongxin";
+    	// person.age=18;
+    	// person.phone="13122430990";
+    	// person.email="dayongxin@aliyun.com";
+    	// document.write("姓名："+person.name+"|"+"年龄："+person.age+"|"+"手机号码："+person.phone+"|"+"电子邮件："+person.email);
+
+    <!--2、使用函数来定义对象，然后创建新的对象实例-->
+    // function person(name,age,phone,email) {
+    // 	<!--this通常指向的是我们正在执行的函数本身，或者是指向该函数所属的对象（运行时）-->
+    // 	this.name=name;
+    // 	this.age=age;
+    // 	this.phone=phone;
+    // 	this.email=email;
+
+    // 	this.changeName=changeName;
+    // 	function changeName(newName) {
+    // 		this.name=newName;
+    // 	}
+    // }
+    // myFriend=new person("dyx",18,"18716321583","dayongxin@aliyun.com");
+    // myFriend.changeName("达永新");
+    // document.write("姓名："+myFriend.name+"|"+"年龄："+myFriend.age+"|"+"手机号码："+myFriend.phone+"|"+"电子邮件："+myFriend.email);
+
+    <!--JavaScript for...in 循环-->
+    // function myFun() {
+    // 	var x;
+    // 	var text="";
+    // 	var person={name:"达永新",age:18,phone:"13122430990",email:"dayongxin@aliyun.com"};
+
+    // 	for(x in person){
+    // 		text=text+person[x]+"|";
+    // 	}
+    // 	document.write(text);
+    // }
+
+    <!--JavaScript Number 对象-->
+    <!--精度：整数（不使用小数点或指数计数法）最多为 15 位-->
+    // var x=0.1+0.2;
+    // var x=12345678901234567890;
+    // document.write(x);
+
+    <!--八进制和十六进制-->
+    // var x= 0377;
+    // var y= 0xFF;
+    // document.write(x+"<br>");
+    // document.write(y+"<br>");
+
+    <!--可以使用 toString() 方法 输出16进制、8进制、2进制。-->
+    // var value=100;
+    // <!--16进制-->
+    // document.write(value.toString(16)+"<br>");
+    // <!--8进制-->
+    // document.write(value.toString(8)+"<br>");
+    // <!--2进制-->
+    // document.write(value.toString(2)+"<br>");
+
+    <!--无穷大（Infinity）-->
+
+    <!--NaN - 非数字值-->
+    // var x=1000/"apple";
+    // var y=1000/"1000";
+    // document.write(isNaN(x)+"<br>");
+    // document.write(isNaN(y)+"<br>");
+
+    <!--数字可以是数字或者对象-->
+    // var x=123;
+    // var y=new Number(123);
+    // document.write(typeof(x)+"<br>");
+    // document.write(typeof(y)+"<br>");
+
+    <!--JavaScript 字符串（String） 对象-->
+    // var value="abc,def,ghi,jkl,m";
+    // document.write("第二个字符："+value[2]+"<br>");
+    // document.write("字符串长度："+value.length+"<br>");
+    // document.write("字符串位置："+value.indexOf("efg")+"<br>");
+    // document.write("内容匹配："+value.match("cdeh")+"<br>");
+    // document.write("替换内容："+value.replace("abcd","test")+"<br>");
+    // document.write("字符串大小写转换："+value.toUpperCase()+"|"+value.toLowerCase()+"<br>");
+    // document.write("字符串转为数组："+value.split(",")+"<br>");
+
+    <!--JavaScript Date（日期） 对象-->
+
+    <!--创建新方法-->
+    // Array.prototype.myProperty=function() {
+    // 	for(i=0;i<this.length;i++){
+    // 		this[i]=this[i].toUpperCase();
+    // 	}
+    // }
+
+    // function myFun() {
+    // 	var temp=["abc","def","ghi","jkl","mno"];
+    // 	temp.myProperty();
+    // 	document.write(temp);
+    // }
+
+    <!--合并两个数组 - concat()-->
+    // function mergeArray() {
+    // 	var array1=["a","b","c","d"];
+    // 	var array2=["e","f","g","h","i"];
+    // 	var temp=array1.concat(array2);
+    // 	document.write(temp);
+    // }
+
+    <!--合并三个数组 - concat()-->
+    // function mergeThreeArray() {
+    // 	var array1=["a","b","c","d"];
+    // 	var array2=["e","f","g","h","i"];
+    // 	var array3=["j","k","l","m"];
+    // 	var temp=array1.concat(array2,array3);
+    // 	document.write(temp);
+    // }
+
+    <!--用数组的元素组成字符串 - join()-->
+    // function joinArray() {
+    // 	var array1=["a","b","c","d"];
+    // 	var temp=array1.join();
+    // 	document.write(temp);
+    // }
+
+    <!--删除数组的最后一个元素 - pop()-->
+    /*function popArray() {
+    	var array1=["a","b","c","d"];
+    	array1.pop();
+    	document.write(array1);
+    }*/
+
+    <!--数组的末尾添加新的元素 - push()-->
+    // function pushArray() {
+    // 	var array1=["a","b","c","d"];
+    // 	array1.push("e");
+    // 	document.write(array1);
+    // }
+
+    <!--将一个数组中的元素的顺序反转排序 - reverse()-->
+    // function reverseArray() {
+    // 	var array1=["a","b","c","d"];
+    // 	document.write(array1.reverse());
+    // }
+
+    <!--删除数组的第一个元素 - shift()-->
+    // function shiftArray() {
+    // 	var array1=["a","b","c","d"];
+    // 	document.write(array1.shift());
+    // }
+
+    <!--从一个数组中选择元素 - slice()-->
+    // function sliceArray() {
+    // 	var array1=["bus","cart","apple","computer","keyboard","cup"];
+    // 	document.write(array1.slice(1,3));
+    // }
+
+    <!--数组排序（按字母顺序升序）- sort()-->
+    // function sortArray() {
+    // 	var array1=["bus","cart","apple","computer","keyboard","cup"];
+    // 	document.write(array1.sort());
+    // }
+
+    <!--数字排序（按数字顺序升序）- sort()-->
+    // function sortNum() {
+    // 	var array=["100","23","5","46","78"];
+    // 	array.sort(function(a,b){return a-b});
+    // 	document.write(array);
+    // }
+
+    <!--数字排序（按数字顺序降序）- sort()-->
+	// function sortNum() {
+ 	//   var array=["100","23","5","46","78"];
+ 	//   array.sort(function(a,b){return b-a});
+ 	//   document.write(array);
+ 	// }
+
+ 	<!--在数组的第2位置添加一个元素 - splice()-->
+	// function spliceArray() {
+	// 	var array=["bus","cart","apple","computer","keyboard","cup"];
+	// 	array.splice(2,0,"mother","father");
+	// 	document.write(array);
+	// }
+
+	<!--转换数组到字符串 -toString()-->
+	// function toStringArray() {
+	// 	var array=["bus","cart","apple","computer","keyboard","cup"];
+	// 	document.write(array.toString());
+	// }
+
+	<!--在数组的开头添加新元素 - unshift()-->
+	// function unshiftArray() {
+	// 	var array=["bus","cart","apple","computer","keyboard","cup"];
+	// 	document.write(array.unshift("new"));
+	// }
+
+	<!--JavaScript Math（算数） 对象-->
+	// function myMath() {
+	// 	// var temp=Math.abs(-199);
+	// 	// var temp=Math.acos(60);
+	// 	// var temp=Math.asin(60);
+	// 	var temp=Math.random();
+	// 	document.write(temp);
+	// }
+
+	<!--JavaScript Window - 浏览器对象模型-->
+
+	<!--确定浏览器窗口的尺寸-->
+	// function showInfo() {
+	// 	var width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;
+	// 	var height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
+	// 	document.write("width:"+width+"|"+"height:"+height);
+	// }
+
+	<!--Window Screen 可用宽度 高度-->
+	// function avail() {
+	// 	var w=screen.availWidth;
+	// 	var h=screen.availHeight;
+	// 	document.write("宽度："+w+"|"+"高度："+h);
+	// }
+
+	<!--JavaScript Window Location-->
+	// function locationInfo() {
+	// 	document.write("当前页面URL："+location.href+"<br>"+"主机地址："+location.hostname+"<br>"+"路径和文件名："+location.pathname+"<br>"+"端口号："+location.port+"<br>"+"Web协议："+location.protocol+"<br>");
+	// }
+
+	<!--加载新的文档-->
+	// function loadNewFile() {
+	// 	window.location.assign("http://www.wochu.cn")
+	// }
+
+	<!--JavaScript Cookies-->
+	
+
+	// <!--为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除-->
+	// document.cookie("username=dayongxin;password=123456;expires=Thu, 18 Dec 2016 12:00:00 GMT");
+
+	// <!--使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面-->
+	// document.cookie("username=dayongxin;password=123456;expires=Thu, 18 Dec 2016 12:00:00 GMT;path=/");
+
+	<!--使用 JavaScript 读取 Cookie-->
+	// function readCookie() {
+	// 	<!--使用 JavaScript 创建Cookie-->
+	// 	document.cookie="username=John Doe";
+	// 	<!--使用 JavaScript 修改 Cookie-->
+	// 	document.cookie="username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 GMT; path=/";
+	// 	<!--使用 JavaScript 删除 Cookie：只需要设置 expires 参数为以前的时间即可-->
+	// 	document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+	// 	document.write(document.cookie);
+	// }
+
+	<!--设置 cookie 值的函数-->
+	// function setCookie(cookieName,cookieValue,cookieExpires) {
+	// 	var date=new Date();
+	// 	date.setTime(date.getTime()+(cookieExpires*24*60*60*1000));
+	// 	var expires="expires="+date.toGMTString();
+	// 	document.cookie=cookieName+"|"+cookieValue+"|"+expires;
+	// }
+
+	<!--获取 cookie 值的函数-->
+	// function getCookie(cookieName) {
+	// 	var name=cookieName+"";
+	// 	var ca=document.cookie.split(',');
+	// 	for(var i=0;i<ca.length;i++){
+	// 		var c=ca[i].trim();
+	// 		if(c.indexOf(name)==0)
+	// 			return c.substring(name.length,c.length);
+	// 		return "";
+	// 	}
+	// }
+
+	<!--检测 cookie 值的函数-->
+	// function checkCookie() {
+	// 	var cookieName=getCookie("name");
+	// 	if(cookieName!=""){
+	// 		alert("欢迎回来！"+cookieName);
+	// 	}else{
+	// 		cookieName=prompt("请输入名称：":"");
+	// 		if(cookieName!=null&&cookieName!=""){
+	// 			setCookie("name",dyx,100);
+	// 		}
+	// 	}
+	// }
+    </script>
+    <button type="button" onclick="setCookie('name','dyx',1000)">创建新方法</button>
+</body>
+</html>
